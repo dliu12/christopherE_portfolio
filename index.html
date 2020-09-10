@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Christopher E. portfolio">
+        <meta name="keywords" content="Christopher E, Christopher, portfolio">
+        <meta name="author" content="Diyi Liu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+        <title>Christopher E</title>
+        <link href="styles.css">
+    </head>
+    <body>
+        <div id="content"></div>
+        <!-- <script type="text/babel" src="chrisReactComponent.js"></script> -->
+        <script type="text/babel">
+        //Components
+            //Welcome Banner
+            class WelcomeBanner extends React.Component{
+                constructor(props){
+                    super(props);
+                }
+                render(){
+                    return(
+                        <div>
+                            <span>Welcome</span>
+                        </div>
+                    );
+                }
+            }
+
+            //Greeting Words
+            class Greetings extends React.Component{
+                constructor(props){
+                    super(props);
+                }
+                render(){
+                    return(
+                        <div>
+                            <h1>Christopher E </h1>
+                            <h2>Cybersecurity Engineer / Security Analyst</h2>
+                            <h2>OSCP (Jun. 2020), CySA+ (expected Sept. 2020)</h2>
+                        </div>
+                    );
+                }
+            }
+            
+            //Buttons and links
+            class ReferenceLinks extends React.Component{
+                constructor(props){
+                    super(props);
+                }
+                render(){
+                    return(
+                        <div>
+                            <a href="">LinkedIn</a>
+                            <a href="">GitHub</a>
+                            <a href="">Learn More</a>
+                        </div>
+                    );
+                }
+            }
+
+            //Logo and profile picture
+            class Logo extends React.Component{
+                constructor(props){
+                    super(props);
+                }
+                render(){
+                    return(
+                        <div><image src=""/></div>
+                    );
+                }
+            }
+
+            //Banner
+            class BannerDeco extends React.Component{
+                constructor(props){
+                    super(props);
+                }
+                render(){
+                    return(
+                        <div>place image in background to repeat</div>
+                    );
+                }
+            }
+
+            //Resume Deco
+            class RoundDeco extends React.Component{
+                constructor(props){
+                    super(props);
+                }
+                render(){
+                    return(
+                        <div className="roundDeco"/>
+                    );
+                }
+            }
+            //Resume Component
+            class ResumeComponent extends React.Component{
+                constructor(props){
+                    super(props);
+                }
+                render(){
+                    return(
+                        <section>
+                            <RoundDeco />
+                            <ul>
+                                <li></li>
+                            </ul>
+                        </section>
+                    );
+                }
+            }
+            //Resume Section
+            class ResumeSection extends React.Component {
+                constructor(props){
+                    super(props);
+                }
+                render(){
+                    return(
+                        <div>
+                            
+                        </div>
+                    );
+                }
+            }
+        // main render
+        class App extends React.Component {
+            constructor(props){
+                super(props);
+            }
+            render(){
+                return(
+                    <div>
+                        <div>
+                            <WelcomeBanner />
+                            <Greetings />
+                            <ReferenceLinks />
+                        </div>
+                    </div>
+                );
+            }
+        }
+        
+        let node = document.getElementById("content");
+        ReactDOM.render(<App />,node);
+        </script>
+    </body>
+</html>

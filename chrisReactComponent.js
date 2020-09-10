@@ -1,0 +1,15 @@
+// main render
+class App extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+            <div>
+                hello
+            </div>
+        );
+    }
+}
+let node = document.getElementById("content");
+ReactDOM.render(<App/>,node);
