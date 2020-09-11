@@ -1,1 +1,106 @@
-$border:1px solid red;
+$borderTest:1px solid red;
+@mixin setPadMar {
+    margin:0;
+    padding:0;
+}
+@mixin center {
+    margin: 0 auto 0 auto;
+}
+@mixin setFull {
+    width:100%;
+    height:100%;
+}
+@mixin backgroundColor ($opacity){
+    background-color:rgba(178,202,238,$opacity);
+}
+$darkBlue:#162E50;
+html{
+    @include setFull();
+    scroll-behavior: smooth;
+    body{
+        @include setPadMar();
+        @include setFull();
+
+        #content{
+            @include setFull();
+            #react{
+                @include setFull();
+                position:relative;
+                //banner
+                .banner{
+                    border:$borderTest;
+                    position: relative;
+                    width:50px;
+                    height:100%;
+                    overflow:hidden;
+                }
+                //first greeting page
+                #greetingSection{
+                    @include setFull();
+                    @include backgroundColor(0.15);
+                    display:flex;
+                    flex-direction: row;
+                    position: relative;
+                    //decoBanner
+                    #greetingBanner{
+                        background:url("images/DecoBanner.svg");
+                        background-repeat: repeat-y;
+                        background-size:75%;
+                        opacity:50%;
+                    }
+                    //content
+                    #greetingContent{
+                        border:$borderTest;
+                        @include setFull();
+                        display:flex;
+                        flex-direction: column;
+                        //welcome bar
+                        #welcome{
+                            // border:$borderTest;
+                            width:fit-content;
+                            height:25px;
+                            padding-left:10px;
+                            span{
+                                border-top:2px solid $darkBlue;
+                            }
+                        }
+
+                        //the actual content (finally)
+                        #greetings{
+                            border:$borderTest;
+                            @include setFull();
+                            display:flex;
+                            flex-direction:row;
+                            #logoImage{
+                                border:$borderTest;
+                                width:40%;
+                                display:flex;
+                                align-items: center;
+                                justify-content: center;
+                                img{
+                                    max-width:100%;
+                                    height:auto;
+                                    transform: scaleY(0.75);
+                                    margin-bottom:25%;
+                                }
+                            }
+                            #greets{
+                                border:$borderTest;
+                                width:60%;
+                                height:100%;
+                            }
+                        }
+
+                    }
+
+                }
+                //second resume section
+                #resumeSection{
+                    border:$borderTest;
+                    background-color:lightsalmon;
+                    @include setFull();
+                }
+            }
+        }
+    }
+}
