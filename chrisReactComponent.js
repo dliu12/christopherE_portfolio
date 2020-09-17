@@ -23,7 +23,8 @@ class Greetings extends React.Component {
       <div id="greetingInfo">
         <h1>Christopher E </h1>
         <h2>Cybersecurity Engineer / Security Analyst</h2>
-        <h2>OSCP (Jun. 2020), CySA+ (expected Sept. 2020)</h2>
+        <h2>OSCP (Jun. 2020)</h2>
+        <h2>CySA+ (expected Sept. 2020)</h2>
       </div>
     );
   }
@@ -37,9 +38,9 @@ class ReferenceLinks extends React.Component {
   render() {
     return (
       <div id="refLinks">
-        <a href="https://www.linkedin.com/in/christopher-e/" target="_blank"><i className="fab fa-linkedin" ></i></a>
-        <a href="https://github.com/e-chris" target="_blank"><i className="fab fa-github-square"></i></a>
-        <a href="#resumeSection">Learn More</a>
+        <a id="linkedIn" href="https://www.linkedin.com/in/christopher-e/" target="_blank"><i className="fab fa-linkedin" ></i></a>
+        <a  id="gitHub" href="https://github.com/e-chris" target="_blank"><i className="fab fa-github-square"></i></a>
+        <a id="scrollButton" href="#resumeSection"><span>Learn More</span></a>
       </div>
     );
   }
@@ -117,10 +118,12 @@ class App extends React.Component {
         <section id="greetingSection">
           <div id="greetingContent">
             <WelcomeBanner />
-            <div id="greetings">
+            <div id="greetings"> 
                 <div id="greets">
+                  <div id="container">
                     <Greetings />
                     <ReferenceLinks />
+                  </div>
                 </div>
                 <Logo />
             </div>
