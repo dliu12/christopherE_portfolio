@@ -37,7 +37,7 @@ class ReferenceLinks extends React.Component {
   render() {
     return (
       <div id="refLinks">
-        <a href="https://www.linkedin.com/in/christopher-e/" target="_blank"><i className="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/christopher-e/" target="_blank"><i className="fab fa-linkedin" ></i></a>
         <a href="https://github.com/e-chris" target="_blank"><i className="fab fa-github-square"></i></a>
         <a href="#resumeSection">Learn More</a>
       </div>
@@ -53,7 +53,10 @@ class Logo extends React.Component {
   render() {
     return (
       <div id="logoImage">
-        <img src="images/filterImage.svg" />
+        <div id="imageSize">
+          <img id="portfolioImg" src="images/filterImage.png" />
+          <img id="portfolioBackdrop" src="images/backdrop.png" />
+        </div>
       </div>
     );
   }
