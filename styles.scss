@@ -17,6 +17,12 @@ $borderTest:1px solid red;
     align-items: center;
     justify-content: center;
 }
+@mixin bannerBackground($opacity){
+    background:url("images/DecoBanner.svg");
+    background-repeat: repeat-y;
+    background-size:75%;
+    opacity: $opacity;
+}
 
 $backdropVar:30%;
 $darkBlue:#162E50;
@@ -40,6 +46,7 @@ html{
                     position: relative;
                     width:50px;
                     height:100%;
+                    
                     overflow:hidden;
                 }
                 //first greeting page
@@ -51,10 +58,7 @@ html{
                     position: relative;
                     //decoBanner
                     #greetingBanner{
-                        background:url("images/DecoBanner.svg");
-                        background-repeat: repeat-y;
-                        background-size:75%;
-                        opacity:50%;
+                        @include bannerBackground(50%);
                     }
                     //content
                     #greetingContent{
@@ -206,8 +210,14 @@ html{
                 //second resume section
                 #resumeSection{
                     border:$borderTest;
-                    background-color:lightsalmon;
+                    @include backgroundColor(0.10);
                     @include setFull();
+                    #resumeBanner{
+                        border:$borderTest;
+                        @include bannerBackground(30%);
+                        transform: rotateZ(180deg);
+
+                    }
                 }
             }
         }

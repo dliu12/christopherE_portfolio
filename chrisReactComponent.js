@@ -69,7 +69,7 @@ class BannerDeco extends React.Component {
     super(props);
   }
   render() {
-    return <div className="banner" id="greetingBanner"></div>;
+    return <div className="banner" id={this.props.idName}></div>;
   }
 }
 
@@ -128,11 +128,10 @@ class App extends React.Component {
                 <Logo />
             </div>
           </div>
-          <BannerDeco />
+          <BannerDeco idName="greetingBanner"/>
         </section>
-
         <section id="resumeSection">
-          <BannerDeco />
+          <BannerDeco idName = "resumeBanner"/>
           <ResumeSection />
         </section>
       </div>

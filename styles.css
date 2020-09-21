@@ -260,8 +260,18 @@ html body #content #react #greetingSection #greetingContent #greetings #greets #
 
 html body #content #react #resumeSection {
   border: 1px solid red;
-  background-color: lightsalmon;
+  background-color: rgba(178, 202, 238, 0.1);
   width: 100%;
   height: 100%;
+}
+
+html body #content #react #resumeSection #resumeBanner {
+  border: 1px solid red;
+  background: url("images/DecoBanner.svg");
+  background-repeat: repeat-y;
+  background-size: 75%;
+  opacity: 30%;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
 }
 /*# sourceMappingURL=styles.css.map */
