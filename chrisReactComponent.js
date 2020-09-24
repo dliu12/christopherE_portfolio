@@ -24,7 +24,7 @@ class Greetings extends React.Component {
         <h1>Christopher E </h1>
         <h2>Cybersecurity Engineer / Security Analyst</h2>
         <h2>OSCP (Jun. 2020)</h2>
-        <h2>CySA+ (expected Sept. 2020)</h2>
+        <h2>CySA+ (Sept. 2020)</h2>
       </div>
     );
   }
@@ -91,10 +91,45 @@ class ResumeComponent extends React.Component {
     return (
       <section>
         <RoundDeco />
-        <ul>
-          <li></li>
-        </ul>
+        <h3 className="sectionTitle">{this.props.title}</h3>
+        {this.props.sectionItem}
       </section>
+    );
+  }
+}
+
+class Education extends React.Component {
+  constructor(props){
+    super(props);
+  }
+  schools = {
+    "fullStack":{
+      name: "Fullstack Academy",
+      year: "July, 2020"
+    },
+    "cooperUnion":{
+      name:"The Cooper Union for the Advancement of Science and Art",
+      year:"May,2019",
+      description: "Bachelor of Engineering, Electrical Engineering – Electronic Systems and Materials Track"
+    }
+  } 
+  render(){
+    let renderArr = [];
+    for(let items in this.schools){
+      // console.log(items["name"]);
+      renderArr.push(
+        <li key={items}>
+            <span>{this.schools[items]["name"]}</span>
+            <p>{this.schools[items]["year"]}</p>
+            <p>{this.schools[items]["description"]}</p>
+        </li>
+      );
+    }
+    console.log(renderArr);
+    return(
+      <ul>
+        {renderArr}
+      </ul>
     );
   }
 }
@@ -104,7 +139,9 @@ class ResumeSection extends React.Component {
     super(props);
   }
   render() {
-    return <div></div>;
+    return <div>
+      <ResumeComponent title="Education" sectionItem={<Education />}/>
+    </div>;
   }
 }
 // main render
