@@ -211,9 +211,15 @@ html{
                 #resumeSection{
                     border:$borderTest;
                     @include backgroundColor(0.10);
+                    background-attachment: fixed;
                     @include setFull();
+                    // resume code here - find solution
+                    overflow:scroll;
+                    display:flex;
+                    flex-direction:row;
                     #resumeBanner{
                         border:$borderTest;
+                        height:100%;
                         @include bannerBackground(30%);
                         transform: rotateZ(180deg);
 
