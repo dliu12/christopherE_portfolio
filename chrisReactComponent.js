@@ -89,7 +89,7 @@ class ResumeComponent extends React.Component {
   }
   render() {
     return (
-      <section>
+      <section id={this.props.idName}>
         <RoundDeco />
         <h3 className="sectionTitle">{this.props.title}</h3>
         {this.props.sectionItem}
@@ -119,13 +119,13 @@ class Education extends React.Component {
       renderArr.push(
         <li key={items}>
             <span>{this.schools[items]["name"]}</span>
-            <p>{this.schools[items]["year"]}</p>
+            <p className="year">{this.schools[items]["year"]}</p>
             <p>{this.schools[items]["description"]}</p>
         </li>
       );
     }
     return(
-      <ul>
+      <ul id="eduList">
         {renderArr}
       </ul>
     );
@@ -192,7 +192,7 @@ class WorkExperience extends React.Component{
       )
     }
     return(
-      <ul>
+      <ul id="workList">
         {renderArr}
       </ul>
     );
@@ -263,7 +263,7 @@ class ResearchProject extends React.Component{
       }
     }
     return(
-      <ul>
+      <ul id="researchList">
         {renderArr}
       </ul>
     );
@@ -306,8 +306,18 @@ class LeadershipAct extends React.Component{
   render(){
     let renderArr =[];
     //resume coding here
+    for(let items in this.activity){
+      renderArr.push(
+        <li key={items}>
+          <span>{this.activity[items]["name"]}</span>
+          <p>{this.activity[items]["year"]}</p>
+          <p>{this.activity[items]["position"]}</p>
+          <p>{this.activity[items]["description"]}</p>
+        </li>
+      );
+    }
     return(
-      <ul>
+      <ul id="leaderList">
         {renderArr}
       </ul>
     );
@@ -320,11 +330,11 @@ class ResumeSection extends React.Component {
   }
   render() {
     return (
-    <div>
-      <ResumeComponent title="Education" sectionItem={<Education />}/>
-      <ResumeComponent title="Work Experience" sectionItem={<WorkExperience />} />
-      <ResumeComponent title="Research and Projects" sectionItem = {<ResearchProject />}/>
-      <ResumeComponent title="Activities and Leaderships" sectionItem = {<LeadershipAct />}/>
+    <div id={this.props.idName}>
+      <ResumeComponent idName="eduSec" title="Education" sectionItem={<Education />}/>
+      <ResumeComponent idName="workSec" title="Work Experience" sectionItem={<WorkExperience />} />
+      <ResumeComponent idName="projectSec" title="Research and Projects" sectionItem = {<ResearchProject />}/>
+      <ResumeComponent idName="actSec" title="Activities and Leaderships" sectionItem = {<LeadershipAct />}/>
     </div>
     );
   }
@@ -354,7 +364,7 @@ class App extends React.Component {
         </section>
         <section id="resumeSection">
           <BannerDeco idName = "resumeBanner"/>
-          <ResumeSection />
+          <ResumeSection idName="resumeContext"/>
         </section>
       </div>
     );
