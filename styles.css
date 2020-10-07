@@ -13,28 +13,54 @@ html {
 }
 
 html body {
+  border: 1px solid red;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: rgba(178, 202, 238, 0.1);
+}
+
+html body .banner {
+  position: relative;
+  width: 50px;
+  height: 100%;
+  overflow: hidden;
+}
+
+html body #resumeBanner {
+  position: sticky;
+  position: -webkit-sticky;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #b2caee;
+  background: url("images/DecoBanner.svg");
+  background-repeat: repeat-y;
+  background-size: 75%;
+  opacity: 15%;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
 }
 
 html body #content {
   width: 100%;
   height: 100%;
+  overflow: scroll;
 }
 
 html body #content #react {
   width: 100%;
   height: 100%;
   position: relative;
-}
-
-html body #content #react .banner {
-  position: relative;
-  width: 50px;
-  height: 100%;
-  overflow: hidden;
 }
 
 html body #content #react #greetingSection {
@@ -273,11 +299,11 @@ html body #content #react #greetingSection #greetingContent #greetings #greets #
 }
 
 html body #content #react #resumeSection {
-  background-color: rgba(178, 202, 238, 0.1);
-  background-attachment: fixed;
   width: 100%;
   height: 100%;
-  overflow: scroll;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,20 +311,6 @@ html body #content #react #resumeSection {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-html body #content #react #resumeSection #resumeBanner {
-  position: sticky;
-  position: -webkit-sticky;
-  left: 0;
-  top: 0;
-  height: 100%;
-  background: url("images/DecoBanner.svg");
-  background-repeat: repeat-y;
-  background-size: 75%;
-  opacity: 20%;
-  -webkit-transform: rotateZ(180deg);
-          transform: rotateZ(180deg);
 }
 
 html body #content #react #resumeSection .roundDeco {
@@ -309,6 +321,8 @@ html body #content #react #resumeSection .roundDeco {
   position: absolute;
   top: 0px;
   left: -10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 html body #content #react #resumeSection #resumeContext {
@@ -324,6 +338,8 @@ html body #content #react #resumeSection #resumeContext section {
   margin: 0;
   padding: 0;
   border-left: 2px solid lightgray;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 html body #content #react #resumeSection #resumeContext section .sectionTitle {
@@ -342,10 +358,6 @@ html body #content #react #resumeSection #resumeContext section ul li {
   border: 1px solid red;
 }
 
-html body #content #react #resumeSection #resumeContext section ul li .year {
-  font-weight: bold;
-}
-
 html body #content #react #resumeSection #resumeContext section ul li p {
   margin: 0;
   padding: 0;
@@ -357,12 +369,6 @@ html body #content #react #resumeSection #resumeContext section #eduList > li {
   width: -moz-fit-content;
   width: fit-content;
   min-width: 500px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-  -ms-grid-columns: 1fr 100px;
-      grid-template-columns: 1fr 100px;
 }
 
 html body #content #react #resumeSection #resumeContext section #eduList > li span {
@@ -370,9 +376,14 @@ html body #content #react #resumeSection #resumeContext section #eduList > li sp
 }
 
 html body #content #react #resumeSection #resumeContext section:hover > .roundDeco {
+  background-color: #618FCA;
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+html body #content #react #resumeSection #resumeContext section:hover {
+  border-left: 2px solid #618FCA;
 }
 /*# sourceMappingURL=styles.css.map */

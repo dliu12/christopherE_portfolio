@@ -40,23 +40,42 @@ html{
     scrollbar-width: none;  /* Firefox */
 
     body{
+        border:$borderTest;
         @include setPadMar();
         @include setFull();
+        overflow:hidden;
+        display:flex;
+        flex-direction:row;
+        @include backgroundColor(0.1);
+
+        //banner
+        .banner{
+            // border:$borderTest;
+            position: relative;
+            width:50px;
+            height:100%;
+            overflow:hidden;
+        }
+        #resumeBanner{
+            position:sticky;
+            position: -webkit-sticky;
+            left:0;
+            top:0;
+            // border:$borderTest;
+            height:100%;
+            @include backgroundColor(1);
+            @include bannerBackground(15%);
+            transform: rotateZ(180deg);
+
+        }
 
         #content{
             @include setFull();
+            overflow:scroll;
+            // border:$borderTest;
             #react{
                 @include setFull();
                 position:relative;
-                //banner
-                .banner{
-                    // border:$borderTest;
-                    position: relative;
-                    width:50px;
-                    height:100%;
-                    
-                    overflow:hidden;
-                }
                 //first greeting page
                 #greetingSection{
                     @include setFull();
@@ -221,23 +240,13 @@ html{
                 //second resume section
                 #resumeSection{
                     // border:$borderTest;
-                    @include backgroundColor(0.10);
-                    background-attachment: fixed;
+                    // @include backgroundColor(0.05);
+                    // background-attachment: fixed;
                     @include setFull();
-                    overflow:scroll;
+                    height:fit-content;
                     display:flex;
                     flex-direction:row;
-                    #resumeBanner{
-                        position:sticky;
-                        position: -webkit-sticky;
-                        left:0;
-                        top:0;
-                        // border:$borderTest;
-                        height:100%;
-                        @include bannerBackground(20%);
-                        transform: rotateZ(180deg);
-
-                    }
+                    
                     .roundDeco{
                         width:20px;
                         height:20px;
@@ -246,6 +255,7 @@ html{
                         position: absolute;
                         top:0px;
                         left:-10px;
+                        transition: 0.5s;
                     }
                     #resumeContext{
                         @include setFull();
@@ -259,6 +269,7 @@ html{
                             position:relative;
                             @include setPadMar();
                             border-left:2px solid $sectionDeco;
+                            transition: 0.5s;
                             
                             //inside sections
                             .sectionTitle{
@@ -271,9 +282,9 @@ html{
                                 border:$borderTest;
                                 li{
                                     border:$borderTest;
-                                    .year{
-                                        font-weight:bold;
-                                    }
+                                    // .year{
+                                    //     font-weight:bold;
+                                    // }
                                     p{
                                         @include setPadMar();
                                         margin-bottom:10px;
@@ -285,18 +296,19 @@ html{
                                 width:fit-content;
                                 min-width:500px;
                                 // max-width:500px;
-                                display:grid;
-                                grid-template-rows:1fr 1fr;
-                                grid-template-columns:1fr 100px;
                                 span{
                                     font-weight:bold;
                                 }
                             }
                         }
                         section:hover > .roundDeco{
+                            background-color:$lightBlue;
                             transform:scale(1.25);
                             transition:0.5s;
                             // box-shadow: 0px 1px gray;
+                        }
+                        section:hover{
+                            border-left:2px solid $lightBlue;
                         }
                     }
                 }

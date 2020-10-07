@@ -119,7 +119,7 @@ class Education extends React.Component {
       renderArr.push(
         <li key={items}>
             <span>{this.schools[items]["name"]}</span>
-            <p className="year">{this.schools[items]["year"]}</p>
+            {/* <p className="year">{this.schools[items]["year"]}</p> */}
             <p>{this.schools[items]["description"]}</p>
         </li>
       );
@@ -183,7 +183,7 @@ class WorkExperience extends React.Component{
       renderArr.push(
         <li key={items + (Math.random()*10)}>
           <span className="positionName">{this.work_experience[items]["position"]}</span>
-          <p className="work_duration">{this.work_experience[items]["year"]}</p>
+          {/* <p className="work_duration">{this.work_experience[items]["year"]}</p> */}
           <p className="companyName">{this.work_experience[items]["company"]}</p>
           <ul>
             {descriptionArr}
@@ -242,7 +242,7 @@ class ResearchProject extends React.Component{
         <li key={items}>
           <a href={this.researchProjects[items]["link"]}><strong>{this.researchProjects[items]["name"]}</strong></a>
           <p>{this.researchProjects[items]["addInfo"]}</p>
-          <p>{this.researchProjects[items]["year"]}</p>
+          {/* <p>{this.researchProjects[items]["year"]}</p> */}
           <ul>
             {descriptionArr}
           </ul>
@@ -254,7 +254,7 @@ class ResearchProject extends React.Component{
           <li key={items}>
           <strong>{this.researchProjects[items]["name"]}</strong>
           <p>{this.researchProjects[items]["addInfo"]}</p>
-          <p>{this.researchProjects[items]["year"]}</p>
+          {/* <p>{this.researchProjects[items]["year"]}</p> */}
           <ul>
             {descriptionArr}
           </ul>
@@ -310,7 +310,7 @@ class LeadershipAct extends React.Component{
       renderArr.push(
         <li key={items}>
           <span>{this.activity[items]["name"]}</span>
-          <p>{this.activity[items]["year"]}</p>
+          {/* <p>{this.activity[items]["year"]}</p> */}
           <p>{this.activity[items]["position"]}</p>
           <p>{this.activity[items]["description"]}</p>
         </li>
@@ -363,7 +363,6 @@ class App extends React.Component {
           <BannerDeco idName="greetingBanner"/>
         </section>
         <section id="resumeSection">
-          <BannerDeco idName = "resumeBanner"/>
           <ResumeSection idName="resumeContext"/>
         </section>
       </div>
