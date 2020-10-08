@@ -24,11 +24,22 @@ $borderTest:1px solid red;
     opacity: $opacity;
 }
 
+//fonts
+$lato:'Lato', sans-serif;
+$playfair: 'Playfair Display', serif;
+$playfairSC:'Playfair Display SC', serif;
+
+//colors
 $sectionDeco: lightgray;
 $backdropVar:30%;
 $darkBlue:#162E50;
 $lightBlue:#618FCA;
 $iconSize:50px;
+$nav-background:#F7FAFD;
+.displayNone{
+    display:none;
+}
+
 html::-webkit-scrollbar{
     display:none;
 }
@@ -38,9 +49,11 @@ html{
     //hide scroll bar
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    font-family:$lato;
+    color:$darkBlue;
 
     body{
-        border:$borderTest;
+        // border:$borderTest;
         @include setPadMar();
         @include setFull();
         overflow:hidden;
@@ -57,7 +70,7 @@ html{
             overflow:hidden;
         }
         #resumeBanner{
-            position:sticky;
+            position:fixed;
             position: -webkit-sticky;
             left:0;
             top:0;
@@ -66,12 +79,15 @@ html{
             @include backgroundColor(1);
             @include bannerBackground(15%);
             transform: rotateZ(180deg);
-
+            width:0;
+            transition: 0.15s;
+            z-index:2;
         }
 
         #content{
             @include setFull();
             overflow:scroll;
+            transition: 0.5s;
             // border:$borderTest;
             #react{
                 @include setFull();
@@ -101,6 +117,8 @@ html{
                             height:25px;
                             padding-left:5%;
                             padding-top:25px;
+                            font-family:$playfair;
+                            font-weight:100;
                             span{  
                                 border-top:2px solid $darkBlue;
                                 padding-top:10px;
@@ -135,8 +153,9 @@ html{
                                 #imageSize{
                                     // border:$borderTest;
                                     position: relative;
-                                    width:50%;
-                                    min-width:300px;
+                                    width:40%;
+                                    min-width:250px;
+                                    max-width:350px;
                                     height:fit-content;
                                     min-height:250px;
                                     img{
@@ -173,12 +192,16 @@ html{
                                     justify-content: space-between;
                                     #greetingInfo{
                                         // border:$borderTest;
-                                        margin-bottom:25%;
+                                        margin-bottom:15%;
                                         h1{
-                                            font-size:50px;
+                                            font-size:70px;
+                                            font-family: $playfair;
+                                            font-weight:900;
+                                            letter-spacing:0.2rem;
                                         }
                                         h2{
                                             font-size:25px;
+                                            font-weight:400;
                                         }
                                     }
 
@@ -239,14 +262,49 @@ html{
                 }
                 //second resume section
                 #resumeSection{
-                    // border:$borderTest;
-                    // @include backgroundColor(0.05);
-                    // background-attachment: fixed;
                     @include setFull();
                     height:fit-content;
                     display:flex;
-                    flex-direction:row;
+                    flex-direction:column;
                     
+                    //narv bar for resume section
+                    #resume-navBar{
+                        // border:$borderTest;
+                        height:fit-content;
+                        width:100%;
+                        position:sticky;
+                        top:0;
+                        background-color:$nav-background;
+                        z-index:1;
+                        display:none;
+                        #resume-navBar-name{
+                            position: relative;
+                            border:$borderTest;
+                            @include setPadMar();
+                            text-align: center;
+                            font-size:40px;
+
+                        }
+                        #refLinks{
+                            // border:$borderTest;
+                            position: relative;
+                            font-size:35px;
+                            width:150px;
+                            margin:0 auto 0 auto;
+                            display:flex;
+                            flex-direction:row;
+                            justify-content: space-evenly;
+                            a,a:hover{
+                                color:$lightBlue;
+                                transition: 0.3s;
+                            }
+                            a:hover{
+                                text-shadow: 1px 1px $darkBlue;
+                                transition: 0.3s;
+                            }
+                        }
+                    }
+
                     .roundDeco{
                         width:20px;
                         height:20px;
@@ -262,7 +320,7 @@ html{
                         // border:$borderTest;
                         width:85%;
                         margin:0 auto 0 auto;
-                        margin-top:35px;
+                        margin-top:50px;
 
                         section{
                             // border:$borderTest;
@@ -282,9 +340,6 @@ html{
                                 border:$borderTest;
                                 li{
                                     border:$borderTest;
-                                    // .year{
-                                    //     font-weight:bold;
-                                    // }
                                     p{
                                         @include setPadMar();
                                         margin-bottom:10px;

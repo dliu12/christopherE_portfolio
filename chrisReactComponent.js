@@ -40,7 +40,21 @@ class ReferenceLinks extends React.Component {
       <div id="refLinks">
         <a id="linkedIn" href="https://www.linkedin.com/in/christopher-e/" target="_blank"><i className="fab fa-linkedin" ></i></a>
         <a  id="gitHub" href="https://github.com/e-chris" target="_blank"><i className="fab fa-github-square"></i></a>
-        <a id="scrollButton" href="#resumeSection"><span>Learn More</span></a>
+        {/* <a id="scrollButton" href="#resumeSection"><span>Learn More</span></a> */}
+      </div>
+    );
+  }
+}
+//sub nav - resume section
+class ResumeNav extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return(
+      <div id="resume-navBar">
+        <p id="resume-navBar-name">Christopher E</p>
+        <ReferenceLinks />
       </div>
     );
   }
@@ -363,6 +377,7 @@ class App extends React.Component {
           <BannerDeco idName="greetingBanner"/>
         </section>
         <section id="resumeSection">
+          <ResumeNav />
           <ResumeSection idName="resumeContext"/>
         </section>
       </div>

@@ -1,3 +1,7 @@
+.displayNone {
+  display: none;
+}
+
 html::-webkit-scrollbar {
   display: none;
 }
@@ -10,10 +14,11 @@ html {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+  font-family: "Lato", sans-serif;
+  color: #162E50;
 }
 
 html body {
-  border: 1px solid red;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -37,7 +42,7 @@ html body .banner {
 }
 
 html body #resumeBanner {
-  position: sticky;
+  position: fixed;
   position: -webkit-sticky;
   left: 0;
   top: 0;
@@ -49,12 +54,18 @@ html body #resumeBanner {
   opacity: 15%;
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
+  width: 0;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  z-index: 2;
 }
 
 html body #content {
   width: 100%;
   height: 100%;
   overflow: scroll;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 html body #content #react {
@@ -104,6 +115,8 @@ html body #content #react #greetingSection #greetingContent #welcome {
   height: 25px;
   padding-left: 5%;
   padding-top: 25px;
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
 }
 
 html body #content #react #greetingSection #greetingContent #welcome span {
@@ -152,8 +165,9 @@ html body #content #react #greetingSection #greetingContent #greetings #logoImag
 
 html body #content #react #greetingSection #greetingContent #greetings #logoImage #imageSize {
   position: relative;
-  width: 50%;
-  min-width: 300px;
+  width: 40%;
+  min-width: 250px;
+  max-width: 350px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -212,15 +226,19 @@ html body #content #react #greetingSection #greetingContent #greetings #greets #
 }
 
 html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo {
-  margin-bottom: 25%;
+  margin-bottom: 15%;
 }
 
 html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo h1 {
-  font-size: 50px;
+  font-size: 70px;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
 }
 
 html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo h2 {
   font-size: 25px;
+  font-weight: 400;
 }
 
 html body #content #react #greetingSection #greetingContent #greetings #greets #container #refLinks {
@@ -307,10 +325,61 @@ html body #content #react #resumeSection {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body #content #react #resumeSection #resume-navBar {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #F7FAFD;
+  z-index: 1;
+  display: none;
+}
+
+html body #content #react #resumeSection #resume-navBar #resume-navBar-name {
+  position: relative;
+  border: 1px solid red;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 40px;
+}
+
+html body #content #react #resumeSection #resume-navBar #refLinks {
+  position: relative;
+  font-size: 35px;
+  width: 150px;
+  margin: 0 auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+html body #content #react #resumeSection #resume-navBar #refLinks a, html body #content #react #resumeSection #resume-navBar #refLinks a:hover {
+  color: #618FCA;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+html body #content #react #resumeSection #resume-navBar #refLinks a:hover {
+  text-shadow: 1px 1px #162E50;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 html body #content #react #resumeSection .roundDeco {
@@ -330,7 +399,7 @@ html body #content #react #resumeSection #resumeContext {
   height: 100%;
   width: 85%;
   margin: 0 auto 0 auto;
-  margin-top: 35px;
+  margin-top: 50px;
 }
 
 html body #content #react #resumeSection #resumeContext section {
