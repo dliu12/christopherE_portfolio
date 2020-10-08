@@ -196,7 +196,7 @@ class WorkExperience extends React.Component{
       }
       renderArr.push(
         <li key={items + (Math.random()*10)}>
-          <span className="positionName">{this.work_experience[items]["position"]}</span>
+          <strong className="positionName">{this.work_experience[items]["position"]}</strong>
           {/* <p className="work_duration">{this.work_experience[items]["year"]}</p> */}
           <p className="companyName">{this.work_experience[items]["company"]}</p>
           <ul>
@@ -255,7 +255,7 @@ class ResearchProject extends React.Component{
         renderArr.push(
         <li key={items}>
           <a href={this.researchProjects[items]["link"]}><strong>{this.researchProjects[items]["name"]}</strong></a>
-          <p>{this.researchProjects[items]["addInfo"]}</p>
+          <p className="companyName">{this.researchProjects[items]["addInfo"]}</p>
           {/* <p>{this.researchProjects[items]["year"]}</p> */}
           <ul>
             {descriptionArr}
@@ -267,7 +267,7 @@ class ResearchProject extends React.Component{
         renderArr.push(
           <li key={items}>
           <strong>{this.researchProjects[items]["name"]}</strong>
-          <p>{this.researchProjects[items]["addInfo"]}</p>
+          <p className="companyName">{this.researchProjects[items]["addInfo"]}</p>
           {/* <p>{this.researchProjects[items]["year"]}</p> */}
           <ul>
             {descriptionArr}
@@ -323,9 +323,9 @@ class LeadershipAct extends React.Component{
     for(let items in this.activity){
       renderArr.push(
         <li key={items}>
-          <span>{this.activity[items]["name"]}</span>
+          <strong>{this.activity[items]["name"]}</strong>
           {/* <p>{this.activity[items]["year"]}</p> */}
-          <p>{this.activity[items]["position"]}</p>
+          <p className="companyName">{this.activity[items]["position"]}</p>
           <p>{this.activity[items]["description"]}</p>
         </li>
       );

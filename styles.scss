@@ -86,7 +86,7 @@ html{
 
         #content{
             @include setFull();
-            overflow:scroll;
+            overflow-y:scroll;
             transition: 0.5s;
             // border:$borderTest;
             #react{
@@ -194,8 +194,8 @@ html{
                                         // border:$borderTest;
                                         margin-bottom:15%;
                                         h1{
-                                            font-size:70px;
-                                            font-family: $playfair;
+                                            font-size:60px;
+                                            font-family: $playfairSC;
                                             font-weight:900;
                                             letter-spacing:0.2rem;
                                         }
@@ -279,9 +279,11 @@ html{
                         display:none;
                         #resume-navBar-name{
                             position: relative;
-                            border:$borderTest;
+                            // border:$borderTest;
                             @include setPadMar();
                             text-align: center;
+                            font-family:$playfairSC;
+                            font-weight:700;
                             font-size:40px;
 
                         }
@@ -318,7 +320,7 @@ html{
                     #resumeContext{
                         @include setFull();
                         // border:$borderTest;
-                        width:85%;
+                        width:75%;
                         margin:0 auto 0 auto;
                         margin-top:50px;
 
@@ -331,18 +333,31 @@ html{
                             
                             //inside sections
                             .sectionTitle{
-                                border:$borderTest;
+                                // border:$borderTest;
                                 @include setPadMar();
+                                position: relative;
+                                top:-10px;
                                 margin-left:15px;
-                                font-size:30px;
+                                font-family:$playfairSC;
+                                font-size:28px;
+                                font-weight:600;
                             }
                             ul{
-                                border:$borderTest;
+                                // border:$borderTest;
+                                padding-bottom:15px;
                                 li{
-                                    border:$borderTest;
+                                    // border:$borderTest;
+                                    padding-top:5px;
+                                    // padding-bottom:5px;
                                     p{
                                         @include setPadMar();
-                                        margin-bottom:10px;
+                                        margin-bottom:5px;
+                                    }
+                                    .companyName{
+                                        font-style: italic;
+                                    }
+                                    a,a:visited{
+                                        color:$darkBlue;
                                     }
                                 }
                             }
