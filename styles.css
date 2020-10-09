@@ -109,12 +109,15 @@ html body #content #react #greetingSection #greetingContent {
 }
 
 html body #content #react #greetingSection #greetingContent #welcome {
+  position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 25px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding-left: 5%;
-  padding-top: 25px;
+  margin-top: 15px;
   font-family: "Playfair Display", serif;
   font-weight: 100;
 }
@@ -150,7 +153,6 @@ html body #content #react #greetingSection #greetingContent #greetings #logoImag
   -ms-grid-column: 2;
   grid-area: logo;
   width: 100%;
-  min-height: 350px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,7 +173,6 @@ html body #content #react #greetingSection #greetingContent #greetings #logoImag
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 250px;
 }
 
 html body #content #react #greetingSection #greetingContent #greetings #logoImage #imageSize img {
@@ -210,9 +211,8 @@ html body #content #react #greetingSection #greetingContent #greetings #greets {
 html body #content #react #greetingSection #greetingContent #greetings #greets #container {
   width: 75%;
   min-width: 450px;
-  height: 50%;
+  height: 100%;
   margin-left: 20%;
-  margin-bottom: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,13 +220,9 @@ html body #content #react #greetingSection #greetingContent #greetings #greets #
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo {
-  margin-bottom: 15%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo h1 {
@@ -243,22 +239,24 @@ html body #content #react #greetingSection #greetingContent #greetings #greets #
 
 html body #content #react #greetingSection #greetingContent #greetings #greets #container #refLinks {
   width: 25%;
-  height: 100px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   min-width: 125px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-      grid-template-areas: 'linkedin github' 'scrollBtn scrollBtn';
+      grid-template-areas: 'linkedin github';
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 10px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 html body #content #react #greetingSection #greetingContent #greetings #greets #container #refLinks a, html body #content #react #greetingSection #greetingContent #greetings #greets #container #refLinks a:visited {
@@ -293,19 +291,6 @@ html body #content #react #greetingSection #greetingContent #greetings #greets #
   -ms-grid-column: 2;
   grid-area: github;
   font-size: 50px;
-}
-
-html body #content #react #greetingSection #greetingContent #greetings #greets #container #refLinks #scrollButton {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: scrollBtn;
-  border-radius: 15px;
-  height: 40px;
-  background-color: #618FCA;
-  color: white;
-  text-align: center;
-  font-size: 20px;
 }
 
 html body #content #react #greetingSection #greetingContent #greetings #greets #container #refLinks #scrollButton:hover {
