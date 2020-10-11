@@ -46,6 +46,8 @@ $media750:750px;
 $media600:600px;
 $media450:450px;
 $media350:350px;
+$media320:320px;
+$media280:280px;
 
 
 
@@ -112,7 +114,10 @@ html{
                     //decoBanner
                     #greetingBanner{
                         @include bannerBackground(50%);
-                        min-width: 50px;
+                        transition: $transition03;
+                        @media only screen and (max-width:$media450){
+                            width:35px;
+                        }
                     }
                     //content
                     #greetingContent{
@@ -137,6 +142,10 @@ html{
                                 border-top:2px solid $darkBlue;
                                 padding-top:10px;
                                 font-size:18px;
+                                transition: $transition03;
+                                @media only screen and(max-width:$media350){
+                                    font-size:15px;
+                                }
                             }
                         }
 
@@ -224,10 +233,15 @@ html{
                                         min-width:300px;
                                         margin-left:10px;
                                     }
+                                    @media only screen and (max-width:$media320){
+                                        min-width:200px;
+                                        margin-left:0;
+                                    }
 
                                     display:flex;
                                     flex-direction: column;
                                     justify-content: space-evenly;
+                                    
                                     #greetingInfo{
                                         // border:$borderTest;
                                         h1{
@@ -245,6 +259,9 @@ html{
                                             @media only screen and (max-width:$media450){
                                                 font-size:30px;
                                             }
+                                            @media only screen and (max-width:$media350){
+                                                letter-spacing:0;
+                                            }
                                         }
                                         h2{
                                             font-size:1.5vw;
@@ -258,6 +275,9 @@ html{
                                             }
                                             @media only screen and (max-width:$media450){
                                                 font-size:4vw;
+                                            }
+                                            @media only screen and (max-width:$media320){
+                                                font-size:13px;
                                             }
                                         }
                                     }
@@ -338,6 +358,15 @@ html{
                             font-family:$playfairSC;
                             font-weight:700;
                             font-size:40px;
+                            @media only screen and (max-width:$media450){
+                                font-size:35px;
+                            }
+                            @media only screen and (max-width:$media350){
+                                font-size:30px;
+                            }
+                            @media only screen and (max-width:$media280){
+                                font-size:25px;
+                            }
 
                         }
                         #refLinks{
@@ -383,6 +412,9 @@ html{
                         @media only screen and (max-width:$media600){
                             margin-left:55px;
                         }
+                        @media only screen and (max-width:$media450){
+                            margin: 38px;
+                        }
                         margin-top:50px;
 
                         section{
@@ -416,6 +448,7 @@ html{
                                     font-size:18px;
                                     top:-3px;
                                 }
+
                             }
                             ul{
                                 // border:$borderTest;
@@ -426,6 +459,9 @@ html{
                                     padding-inline-start: 25px;
                                 }
                                 @media only screen and (max-width:$media450){
+                                    font-size:13.5px;
+                                }
+                                @media only screen and (max-width:$media350){
                                     font-size:13px;
                                 }
                                 li{

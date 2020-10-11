@@ -90,7 +90,14 @@ html body #content #react #greetingSection #greetingBanner {
   background-repeat: repeat-y;
   background-size: 75%;
   opacity: 50%;
-  min-width: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 450px) {
+  html body #content #react #greetingSection #greetingBanner {
+    width: 35px;
+  }
 }
 
 html body #content #react #greetingSection #greetingContent {
@@ -129,6 +136,14 @@ html body #content #react #greetingSection #greetingContent #welcome span {
   border-top: 2px solid #162E50;
   padding-top: 10px;
   font-size: 18px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 350px) {
+  html body #content #react #greetingSection #greetingContent #welcome span {
+    font-size: 15px;
+  }
 }
 
 html body #content #react #greetingSection #greetingContent #greetings {
@@ -273,6 +288,13 @@ html body #content #react #greetingSection #greetingContent #greetings #greets #
   }
 }
 
+@media only screen and (max-width: 320px) {
+  html body #content #react #greetingSection #greetingContent #greetings #greets #container {
+    min-width: 200px;
+    margin-left: 0;
+  }
+}
+
 html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo h1 {
   font-size: 3.75vw;
   font-family: "Playfair Display SC", serif;
@@ -300,6 +322,12 @@ html body #content #react #greetingSection #greetingContent #greetings #greets #
   }
 }
 
+@media only screen and (max-width: 350px) {
+  html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo h1 {
+    letter-spacing: 0;
+  }
+}
+
 html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo h2 {
   font-size: 1.5vw;
   font-weight: 400;
@@ -322,6 +350,12 @@ html body #content #react #greetingSection #greetingContent #greetings #greets #
 @media only screen and (max-width: 450px) {
   html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo h2 {
     font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo h2 {
+    font-size: 13px;
   }
 }
 
@@ -437,6 +471,24 @@ html body #content #react #resumeSection #resume-navBar #resume-navBar-name {
   font-size: 40px;
 }
 
+@media only screen and (max-width: 450px) {
+  html body #content #react #resumeSection #resume-navBar #resume-navBar-name {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  html body #content #react #resumeSection #resume-navBar #resume-navBar-name {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  html body #content #react #resumeSection #resume-navBar #resume-navBar-name {
+    font-size: 25px;
+  }
+}
+
 html body #content #react #resumeSection #resume-navBar #refLinks {
   position: relative;
   font-size: 35px;
@@ -500,6 +552,12 @@ html body #content #react #resumeSection #resumeContext {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  html body #content #react #resumeSection #resumeContext {
+    margin: 38px;
+  }
+}
+
 html body #content #react #resumeSection #resumeContext section {
   position: relative;
   margin: 0;
@@ -558,6 +616,12 @@ html body #content #react #resumeSection #resumeContext section ul {
 }
 
 @media only screen and (max-width: 450px) {
+  html body #content #react #resumeSection #resumeContext section ul {
+    font-size: 13.5px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
   html body #content #react #resumeSection #resumeContext section ul {
     font-size: 13px;
   }

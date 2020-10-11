@@ -8,9 +8,13 @@
 $(document).ready(function(){
     $("#content").scroll(function(){
         let windowHeight = $(window).height() - 20;
+        let windowWidth = $(window).width();
         let scrollBarHeight = $("#content").scrollTop();
         if(scrollBarHeight >= windowHeight){
             $("#resumeBanner").css("width","50px");
+            if(windowWidth < 450){
+                $("#resumeBanner").css("width","35px");
+            }
         }
         else{
             $("#resumeBanner").css("width","0px");
