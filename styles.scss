@@ -40,6 +40,8 @@ $nav-background:#F7FAFD;
 
 // media queries
 $transition03: 0.3s;
+$media2000:2000px;
+$media1650:1650px;
 $media1050:1050px;
 $media900: 900px;
 $media750:750px; 
@@ -250,6 +252,9 @@ html{
                                             font-weight:900;
                                             letter-spacing:0.2rem;
                                             transition:$transition03;
+                                            @media only screen and (min-width:$media1650){
+                                                font-size:60px;
+                                            }
                                             @media only screen and (max-width:$media1050){
                                                 font-size:4.5vw;
                                             }
@@ -267,6 +272,9 @@ html{
                                             font-size:1.5vw;
                                             font-weight:400;
                                             transition:$transition03;
+                                            @media only screen and (min-width:$media2000){
+                                                font-size:30px;
+                                            }
                                             @media only screen and (max-width:$media1050){
                                                 font-size:2vw;
                                             }

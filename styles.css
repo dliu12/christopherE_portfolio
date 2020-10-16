@@ -304,6 +304,12 @@ html body #content #react #greetingSection #greetingContent #greetings #greets #
   transition: 0.3s;
 }
 
+@media only screen and (min-width: 1650px) {
+  html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo h1 {
+    font-size: 60px;
+  }
+}
+
 @media only screen and (max-width: 1050px) {
   html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo h1 {
     font-size: 4.5vw;
@@ -333,6 +339,12 @@ html body #content #react #greetingSection #greetingContent #greetings #greets #
   font-weight: 400;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media only screen and (min-width: 2000px) {
+  html body #content #react #greetingSection #greetingContent #greetings #greets #container #greetingInfo h2 {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
